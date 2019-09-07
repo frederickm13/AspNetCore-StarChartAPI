@@ -77,7 +77,7 @@ namespace StarChart.Controllers
             return CreatedAtRoute("GetById", new { id = cObject.Id }, cObject);
         }
 
-        [HttpPut("{id:int}")]
+        [HttpPut("{id}")]
         public IActionResult Update(int id, CelestialObject cObject)
         {
             var originalObject = _context.CelestialObjects.Find(id);
